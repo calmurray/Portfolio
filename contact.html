@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Me</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">Data Science Portfolio</a>
+        </div>
+        <ul class="navigation">
+          <li><a href="index.html">Projects</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>Please feel free to get in touch with me for any inquiries or collaborations.</p>
+
+        <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+          
+          <script>
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+              e.preventDefault(); // Prevent form submission
+          
+              // Get form values
+              var name = document.getElementById('name').value;
+              var email = document.getElementById('email').value;
+              var message = document.getElementById('message').value;
+          
+              // Create JavaScript object with form data
+              var formData = {
+                name: name,
+                email: email,
+                message: message
+              };
+          
+              // Convert form data to JSON string
+              var jsonData = JSON.stringify(formData);
+          
+              // Create a new Blob object with the JSON data
+              var blob = new Blob([jsonData], { type: 'application/json' });
+          
+              // Generate a temporary download link for the Blob
+              var link = document.createElement('a');
+              link.href = URL.createObjectURL(blob);
+              link.download = 'contact.json';
+          
+              // Simulate a click on the download link
+              link.click();
+            });
+          </script>
+          
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Contact: yourname@example.com</p>
+    </div>
+  </footer>
+</body>
+</html>
