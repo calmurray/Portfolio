@@ -39,18 +39,20 @@ section#about {
 .profile {
   display: flex;
   align-items: center;
+  justify-content: center; /* Added to center horizontally */
   margin-bottom: 20px;
 }
 
 .profile-picture {
-  width: 200px;
+  width: 300px; /* Increased size to 300px */
   height: auto;
   margin-right: 20px;
 }
 
+
 .experiences h3,
 .accomplishments h3,
-.hobbies h3
+.hobbies h3,
 .education h3 {
   display: flex;
   align-items: center;
@@ -74,8 +76,10 @@ footer {
 }
 
 footer img {
-  width: 24px;
+  width: 34px;
   height: auto;
   margin-left: 5px;
   vertical-align: middle;
 }
+
+
