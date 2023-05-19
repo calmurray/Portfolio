@@ -84,4 +84,28 @@ footer img {
   vertical-align: middle;
 }
 
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
+/* Styles for mobile screens */
+@media (max-width: 767px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .profile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .profile-picture {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  /* Adjust other styles as needed for mobile layout */
+}
